@@ -94,6 +94,14 @@ sudo dpkg -i mattermost-desktop-5.0.1-linux-amd64.deb
 rm mattermost-desktop-5.0.1-linux-amd64.deb
 ```
 
+## Slack
+
+```bash
+wget https://downloads.slack-edge.com/releases/linux/4.21.1/prod/x64/slack-desktop-4.21.1-amd64.deb
+sudo apt install -y ./slack-desktop-4.21.1-amd64.deb
+rm slack-desktop-4.21.1-amd64.deb
+```
+
 ## Skype
 
 ```bash
