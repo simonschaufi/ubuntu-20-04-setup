@@ -105,7 +105,7 @@ rm skypeforlinux-64.deb
 ## Teams
 
 ```bash
-wget https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb -O teams_amd64.deb
+wget 'https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb' -O teams_amd64.deb
 sudo apt install -y ./teams_amd64.deb
 rm teams_amd64.deb
 ```
