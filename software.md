@@ -42,6 +42,14 @@ curl -fsSL https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_20.
 sudo apt update && sudo apt install -y doublecmd-gtk
 ```
 
+## OwnCloud
+
+```bash
+wget -nv https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.04/Release.key -O - | sudo apt-key add -
+echo 'deb https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.04/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
+sudo apt update && sudo apt install owncloud-client
+```
+
 ## Keybase
 
 ```bash
@@ -88,40 +96,38 @@ rm discord.deb
 
 ## Mattermost
 
+https://github.com/mattermost/desktop/releases
+
 ```bash
-wget https://github.com/mattermost/desktop/releases/download/v5.0.1/mattermost-desktop-5.0.1-linux-amd64.deb
-sudo dpkg -i mattermost-desktop-5.0.1-linux-amd64.deb
-rm mattermost-desktop-5.0.1-linux-amd64.deb
+sudo apt install -y gconf-service gconf-service-backend gconf2 gconf2-common libgconf-2-4
+wget https://github.com/mattermost/desktop/releases/download/v5.0.2/mattermost-desktop-5.0.2-linux-amd64.deb
+sudo dpkg -i mattermost-desktop-5.0.2-linux-amd64.deb && rm mattermost-desktop-5.0.2-linux-amd64.deb
 ```
 
 ## Slack
 
 ```bash
 wget https://downloads.slack-edge.com/releases/linux/4.21.1/prod/x64/slack-desktop-4.21.1-amd64.deb
-sudo apt install -y ./slack-desktop-4.21.1-amd64.deb
-rm slack-desktop-4.21.1-amd64.deb
+sudo apt install -y ./slack-desktop-4.21.1-amd64.deb && rm slack-desktop-4.21.1-amd64.deb
 ```
 
 ## Skype
 
 ```bash
 wget https://go.skype.com/skypeforlinux-64.deb
-sudo apt install -y ./skypeforlinux-64.deb
-rm skypeforlinux-64.deb
+sudo apt install -y ./skypeforlinux-64.deb && rm skypeforlinux-64.deb
 ```
 
 ## Teams
 
 ```bash
 wget 'https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb' -O teams_amd64.deb
-sudo apt install -y ./teams_amd64.deb
-rm teams_amd64.deb
+sudo apt install -y ./teams_amd64.deb && rm teams_amd64.deb
 ```
 
 ## Zoom
 
 ```bash
 wget https://zoom.us/client/latest/zoom_amd64.deb
-sudo apt install -y ./zoom_amd64.deb
-rm zoom_amd64.deb
+sudo apt install -y ./zoom_amd64.deb && rm zoom_amd64.deb
 ```
