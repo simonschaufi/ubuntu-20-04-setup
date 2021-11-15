@@ -1,2 +1,5 @@
-# ubuntu20-setup
-My own Ubuntu 20.04 setup scripts
+# Ubuntu 20.04 setup scripts
+
+Execute sudo without Password
+
+* https://askubuntu.com/a/147265
