@@ -30,9 +30,14 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 ~/.rbenv/bin/rbenv init
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-# Install ruby-build
+# Install ruby-build plugin
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+
+# Install aliases plugin
+mkdir -p "$(rbenv root)/plugins"
+git clone https://github.com/tpope/rbenv-aliases.git "$(rbenv root)"/plugins/rbenv-aliases
+rbenv alias --auto
 
 # verify installation
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
