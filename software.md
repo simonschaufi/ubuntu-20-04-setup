@@ -20,7 +20,7 @@ rm teamviewer_amd64.deb
 
 ## Audacity
 
-```
+```bash
 sudo apt update && sudo apt install -y audacity
 ```
 
