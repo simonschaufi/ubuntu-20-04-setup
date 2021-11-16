@@ -24,21 +24,22 @@ sudo apt install -y php-yaml php-mongodb
 * https://github.com/rbenv/ruby-build#installation
 
 ```bash
-sudo apt install -y rbenv
-rbenv init
-printf "\neval \"\$(rbenv init -)\"\n" | tee -a ~/.bashrc
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+~/.rbenv/bin/rbenv init
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-rbenv install 2.4.1
-```
-
-```bash
-# As an rbenv plugin
+# Install ruby-build
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-```
 
-verify installation
-
-```bash
+# verify installation
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+
+# Download and install
+rbenv install 3.0.2
+
+# Set global version
+rbenv global 3.0.2
 ```
