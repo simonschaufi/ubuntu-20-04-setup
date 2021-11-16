@@ -89,3 +89,10 @@ wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.3/mkcert-v1.4.
 sudo mv mkcert-v1.4.3-linux-amd64 /usr/local/bin/mkcert
 sudo chmod +x /usr/local/bin/mkcert
 ```
+
+## Chef
+
+```
+wget http://downloads.cinc.sh/files/unstable/cinc-workstation/21.11.679/ubuntu/20.04/cinc-workstation_21.11.679-1_amd64.deb
+sudo apt install -y ./cinc-workstation_21.11.679-1_amd64.deb && rm cinc-workstation_21.11.679-1_amd64.deb
+```
