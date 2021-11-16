@@ -18,6 +18,12 @@ sudo apt install -y ./teamviewer_amd64.deb
 rm teamviewer_amd64.deb
 ```
 
+## Audacity
+
+```
+sudo apt update && sudo apt install -y audacity
+```
+
 ## Clementine
 
 ```bash
