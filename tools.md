@@ -77,3 +77,15 @@ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-
 
 sudo apt update && sudo apt install -y virtualbox-6.1
 ```
+
+## Mkcert
+
+https://github.com/FiloSottile/mkcert#linux
+
+```bash
+sudo apt install -y libnss3-tools
+cd ~/Downloads
+wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.3/mkcert-v1.4.3-linux-amd64
+sudo cp mkcert-v1.4.3-linux-amd64 /usr/local/bin/mkcert
+sudo chmod +x /usr/local/bin/mkcert
+```
