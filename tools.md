@@ -68,14 +68,11 @@ sudo apt update && sudo apt install -y vagrant
 
 https://www.virtualbox.org/wiki/Linux_Downloads
 
+* Version 6.1.28 is buggy!
+
 ```bash
-sudo tee /etc/apt/sources.list.d/virtualbox.list <<END
-deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib
-END
-
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-
-sudo apt update && sudo apt install -y virtualbox-6.1
+wget -q https://download.virtualbox.org/virtualbox/6.1.26/virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb
+sudo apt install -y virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb && rm virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb
 ```
 
 ## Mkcert
