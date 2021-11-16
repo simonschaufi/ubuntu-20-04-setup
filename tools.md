@@ -22,6 +22,7 @@ sudo apt install -y php-yaml php-mongodb
 
 * https://github.com/rbenv/rbenv#installation
 * https://github.com/rbenv/ruby-build#installation
+* https://github.com/tpope/rbenv-aliases
 
 ```bash
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
