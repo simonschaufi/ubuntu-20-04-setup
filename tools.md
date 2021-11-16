@@ -44,10 +44,11 @@ rbenv alias --auto
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 
 # Download and install
+rbenv install 2.7.4
 rbenv install 3.0.2
 
 # Set global version
-rbenv global 3.0.2
+rbenv global 2.7.4
 
 # Install ruby gems
 gem install bundler
