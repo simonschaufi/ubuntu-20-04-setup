@@ -60,5 +60,20 @@ https://www.vagrantup.com/downloads
 ```bash
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-sudo apt-get update && sudo apt-get install vagrant
+sudo apt update && sudo apt install -y vagrant
+```
+
+
+## Virtualbox
+
+https://www.virtualbox.org/wiki/Linux_Downloads
+
+```bash
+tee /etc/apt/sources.list.d/virtualbox.list <<END
+deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib
+END
+
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+
+sudo apt update && sudo apt install -y virtualbox-6.1
 ```
