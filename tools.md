@@ -42,4 +42,7 @@ rbenv install 3.0.2
 
 # Set global version
 rbenv global 3.0.2
+
+# Install ruby gems
+gem install bundler
 ```
