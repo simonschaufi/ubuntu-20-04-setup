@@ -69,7 +69,7 @@ sudo apt update && sudo apt install -y vagrant
 https://www.virtualbox.org/wiki/Linux_Downloads
 
 ```bash
-tee /etc/apt/sources.list.d/virtualbox.list <<END
+sudo tee /etc/apt/sources.list.d/virtualbox.list <<END
 deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib
 END
 
