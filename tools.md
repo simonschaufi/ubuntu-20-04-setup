@@ -1,5 +1,13 @@
 # Tools
 
+## Install additional languages with aspell
+
+This is useful for german dictionary in PhpStorm. See https://stackoverflow.com/questions/1949976/where-to-find-dictionaries-for-other-languages-for-intellij
+
+```bash
+sudo apt install aspell-de
+```
+
 ## Curl
 
 ```bash
