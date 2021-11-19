@@ -587,6 +587,14 @@ sysctl fs.protected_regular=0
 
 ## My own stuff
 
+```bash
+sudo tee -a /etc/hosts <<EOL
+
+#### HOMESTEAD-SITES-BEGIN
+#### HOMESTEAD-SITES-END
+EOL
+```
+
 ### Make Ubuntu fully dark, not just half...
 
 https://www.omgubuntu.co.uk/2020/04/enable-full-dark-mode-in-ubuntu-20-04
