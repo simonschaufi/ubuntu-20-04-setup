@@ -602,3 +602,9 @@ https://www.omgubuntu.co.uk/2020/04/enable-full-dark-mode-in-ubuntu-20-04
 ```bash
 sudo apt install -y gnome-shell-extensions gnome-shell-extension-prefs gnome-tweaks
 ```
+
+### Adjust ubuntu internal keyboad shortcuts
+
+* Disbale "Auf Arbeitsfläche darunter verschieben"
+* Disbale "Auf Arbeitsfläche darüber verschieben"
+
