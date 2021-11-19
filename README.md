@@ -510,12 +510,12 @@ EOF
 
   mysql --user="root" -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'secret';"
   mysql --user="root" -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;"
-  mysql --user="root" -e "CREATE USER 'homestead'@'0.0.0.0' IDENTIFIED BY 'secret';"
-  mysql --user="root" -e "CREATE USER 'homestead'@'%' IDENTIFIED BY 'secret';"
-  mysql --user="root" -e "GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'0.0.0.0' WITH GRANT OPTION;"
-  mysql --user="root" -e "GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'%' WITH GRANT OPTION;"
+  mysql --user="root" -e "CREATE USER 'simon'@'0.0.0.0' IDENTIFIED BY 'secret';"
+  mysql --user="root" -e "CREATE USER 'simon'@'%' IDENTIFIED BY 'secret';"
+  mysql --user="root" -e "GRANT ALL PRIVILEGES ON *.* TO 'simon'@'0.0.0.0' WITH GRANT OPTION;"
+  mysql --user="root" -e "GRANT ALL PRIVILEGES ON *.* TO 'simon'@'%' WITH GRANT OPTION;"
   mysql --user="root" -e "FLUSH PRIVILEGES;"
-  mysql --user="root" -e "CREATE DATABASE homestead character set UTF8mb4 collate utf8mb4_bin;"
+  # mysql --user="root" -e "CREATE DATABASE homestead character set UTF8mb4 collate utf8mb4_bin;"
 
   sudo tee /home/${USER}/.my.cnf <<EOL
 [mysqld]
