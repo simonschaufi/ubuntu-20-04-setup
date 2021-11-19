@@ -584,3 +584,13 @@ apt-get -y clean;
 # https://askubuntu.com/questions/1250974/user-root-cant-write-to-file-in-tmp-owned-by-someone-else-in-20-04-but-can-in
 sysctl fs.protected_regular=0
 ```
+
+## My own stuff
+
+### Make Ubuntu fully dark, not just half...
+
+https://www.omgubuntu.co.uk/2020/04/enable-full-dark-mode-in-ubuntu-20-04
+
+```bash
+sudo apt install -y gnome-shell-extensions gnome-shell-extension-prefs gnome-tweaks
+```
