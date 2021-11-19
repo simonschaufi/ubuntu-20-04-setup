@@ -6,6 +6,9 @@ This is useful for german dictionary in PhpStorm. See https://stackoverflow.com/
 
 ```bash
 sudo apt install aspell-de
+
+# Generate language file for phpstorm:
+aspell --lang=de dump master | aspell --lang=de expand | tr ' ' '\n' > de.dic
 ```
 
 ## Curl
