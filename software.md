@@ -32,7 +32,7 @@ https://askubuntu.com/a/298286
 
 ```bash
 sudo add-apt-repository ppa:audio-recorder/ppa
-sudo apt update && sudo apt install -y audio-recorder
+sudo apt update -y && sudo apt install -y audio-recorder
 ```
 
 ## Clementine
