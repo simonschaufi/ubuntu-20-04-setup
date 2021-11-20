@@ -20,8 +20,19 @@ rm teamviewer_amd64.deb
 
 ## Audacity
 
+https://askubuntu.com/a/229365
+
 ```bash
-sudo apt update && sudo apt install -y audacity
+sudo apt update && sudo apt install -y pavucontrol audacity
+```
+
+## Audio Recorder
+
+https://askubuntu.com/a/298286
+
+```bash
+sudo add-apt-repository ppa:audio-recorder/ppa
+sudo apt-get update && sudo apt-get install audio-recorder
 ```
 
 ## Clementine
