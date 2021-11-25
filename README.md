@@ -588,6 +588,9 @@ sysctl fs.protected_regular=0
 ## My own stuff
 
 ```bash
+# Remove sudoku game
+sudo apt remove --auto-remove --purge -y gnome-sudoku
+
 sudo tee -a /etc/hosts <<EOL
 
 #### HOMESTEAD-SITES-BEGIN
