@@ -107,3 +107,20 @@ sudo chmod +x /usr/local/bin/mkcert
 wget http://downloads.cinc.sh/files/unstable/cinc-workstation/21.11.679/ubuntu/20.04/cinc-workstation_21.11.679-1_amd64.deb
 sudo apt install -y ./cinc-workstation_21.11.679-1_amd64.deb && rm cinc-workstation_21.11.679-1_amd64.deb
 ```
+
+## Mongodb
+
+https://docs.mongodb.com/v4.0/tutorial/install-mongodb-on-ubuntu/ (slightly modified as the original doesn't support arm64 !)
+
+```bash
+wget -qO - https://www.mongodb.org/static/pgp/server-4.0.asc | sudo apt-key add -
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+sudo apt update && sudo apt install -y mongodb-org
+
+# Enable and start MongoDB Service
+systemctl enable mongod.service
+systemctl start mongod.service
+
+apt-get install -y --allow-change-held-packages \
+php-mongodb
+```
