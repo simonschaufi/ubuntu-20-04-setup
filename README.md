@@ -592,7 +592,7 @@ sysctl fs.protected_regular=0
 sudo apt remove --auto-remove --purge -y gnome-sudoku
 
 # Disable bluetooth startup
-sed -i "s/AutoEnable=true/AutoEnable=false/" /etc/bluetooth/main.conf
+sudo sed -i "s/AutoEnable=true/AutoEnable=false/" /etc/bluetooth/main.conf
 sudo systemctl disable bluetooth.service
 
 # Add section for homestead domains
