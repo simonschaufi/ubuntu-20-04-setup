@@ -118,9 +118,9 @@ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/
 sudo apt update && sudo apt install -y mongodb-org
 
 # Enable and start MongoDB Service
-systemctl enable mongod.service
-systemctl start mongod.service
+sudo systemctl enable mongod.service
+sudo systemctl start mongod.service
 
-apt-get install -y --allow-change-held-packages \
+sudo apt install -y --allow-change-held-packages \
 php-mongodb
 ```
