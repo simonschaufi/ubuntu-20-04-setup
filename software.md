@@ -51,12 +51,32 @@ sudo apt update && sudo apt install -y dbeaver-ce
 
 ## Robo 3T
 
-https://robomongo.org/download
+* https://robomongo.org/download
+* https://gist.github.com/abdallahokasha/37911a64ad289487387e2d1a144604ae
 
 ```bash
 wget https://download.studio3t.com/robomongo/linux/robo3t-1.4.4-linux-x86_64-e6ac9ec.tar.gz
 tar xfz robo3t-1.4.4-linux-x86_64-e6ac9ec.tar.gz
 rm robo3t-1.4.4-linux-x86_64-e6ac9ec.tar.gz
+
+sudo mkdir /usr/local/bin/robo3t
+sudo mv robo3t-1.4.4-linux-x86_64-e6ac9ec/* /usr/local/bin/robo3t/
+rmdir robo3t-1.4.4-linux-x86_64-e6ac9ec
+cd /usr/local/bin/robo3t/bin
+wget https://dashboard.snapcraft.io/site_media/appmedia/2018/09/logo-256x256.png
+
+sudo tee /usr/share/applications/robo3t.desktop <<EOL
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Robo3t
+Icon=/usr/local/bin/robo3t/bin/logo-256x256.png
+Exec="/usr/local/bin/robo3t/bin/robo3t"
+Comment=Robo3t 
+Categories=Development;
+Terminal=false
+StartupNotify=true
+EOL
 ```
 
 ## Double commander
