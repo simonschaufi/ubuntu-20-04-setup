@@ -49,6 +49,16 @@ echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list
 sudo apt update && sudo apt install -y dbeaver-ce
 ```
 
+## Robo 3T
+
+https://robomongo.org/download
+
+```bash
+wget https://download.studio3t.com/robomongo/linux/robo3t-1.4.4-linux-x86_64-e6ac9ec.tar.gz
+tar xfz robo3t-1.4.4-linux-x86_64-e6ac9ec.tar.gz
+rm robo3t-1.4.4-linux-x86_64-e6ac9ec.tar.gz
+```
+
 ## Double commander
 
 https://doublecmd.sourceforge.io/
