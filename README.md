@@ -4,7 +4,7 @@ Execute sudo without Password
 
 * https://askubuntu.com/a/147265
 
-See https://github.com/laravel/settler/blob/master/scripts/provision.sh
+See https://github.com/laravel/settler/blob/9aeeefd19702dafdc32b4de0761a497fca3b609d/scripts/amd64.sh
 
 Run this script with executing `sudo -s` before!
 
