@@ -591,6 +591,11 @@ sysctl fs.protected_regular=0
 # Remove sudoku game
 sudo apt remove --auto-remove --purge -y gnome-sudoku
 
+# Disable bluetooth startup
+sed -i "s/AutoEnable=true/AutoEnable=false/" /etc/bluetooth/main.conf
+sudo systemctl disable bluetooth.service
+
+# Add section for homestead domains
 sudo tee -a /etc/hosts <<EOL
 
 #### HOMESTEAD-SITES-BEGIN
