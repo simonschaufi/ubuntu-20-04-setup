@@ -583,6 +583,14 @@ apt-get -y clean;
 # What are you doing Ubuntu?
 # https://askubuntu.com/questions/1250974/user-root-cant-write-to-file-in-tmp-owned-by-someone-else-in-20-04-but-can-in
 sysctl fs.protected_regular=0
+
+# Enable Swap Memory (https://askubuntu.com/a/1075516)
+swapoff /swapfile
+rm /swapfile
+fallocate -l 16G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
 ```
 
 ## My own stuff
