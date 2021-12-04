@@ -77,7 +77,6 @@ sudo apt update && sudo apt install -y vagrant
 vagrant plugin install vagrant-hostsupdater
 ```
 
-
 ## Virtualbox
 
 https://www.virtualbox.org/wiki/Linux_Downloads
@@ -122,5 +121,27 @@ sudo systemctl enable mongod.service
 sudo systemctl start mongod.service
 
 sudo apt install -y --allow-change-held-packages \
-php-mongodb
+  php-mongodb
+```
+
+## .NET SDK
+
+https://docs.microsoft.com/de-de/dotnet/core/install/linux-ubuntu#2004-
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-6.0
+
+# Opt-out of .NET telemetry
+tee -a ~/.profile <<EOL
+
+# Opt-out of .NET telemetry
+DOTNET_CLI_TELEMETRY_OPTOUT=1
+EOL
 ```
