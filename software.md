@@ -89,6 +89,14 @@ curl -fsSL https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_20.
 sudo apt update && sudo apt install -y doublecmd-gtk
 ```
 
+## PDF Shuffler
+
+https://wiki.ubuntuusers.de/PDF-Shuffler/
+
+```bash
+sudo apt install -y pdfshuffler
+```
+
 ## OwnCloud
 
 ```bash
