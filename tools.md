@@ -26,7 +26,7 @@ sudo apt install -y p7zip p7zip-full p7zip-rar
 ## Install additional php extensions
 
 ```bash
-sudo apt install -y php-yaml php-mongodb
+sudo apt install -y php-yaml php7.4-mongodb php8.0-mongodb
 ```
 
 ## Install Ruby with rbenv
