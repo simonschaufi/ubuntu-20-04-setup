@@ -29,6 +29,12 @@ sudo apt install -y p7zip p7zip-full p7zip-rar
 sudo apt install -y php-yaml php7.4-mongodb php8.0-mongodb
 ```
 
+## Install image minifier
+
+```bash
+sudo apt install -y optipng jpegoptim libjpeg-turbo-progs gifsicle
+```
+
 ## Install Ruby with rbenv
 
 * https://github.com/rbenv/rbenv#installation
