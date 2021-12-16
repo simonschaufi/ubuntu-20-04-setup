@@ -31,6 +31,8 @@ sudo apt install -y php-yaml php7.4-mongodb php8.0-mongodb
 
 ## Install image minifier
 
+* https://github.com/svg/svgo
+
 ```bash
 sudo apt install -y optipng jpegoptim libjpeg-turbo-progs gifsicle
 yarn global add svgo
