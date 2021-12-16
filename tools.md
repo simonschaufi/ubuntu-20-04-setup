@@ -33,6 +33,7 @@ sudo apt install -y php-yaml php7.4-mongodb php8.0-mongodb
 
 ```bash
 sudo apt install -y optipng jpegoptim libjpeg-turbo-progs gifsicle
+yarn global add svgo
 ```
 
 ## Install Ruby with rbenv
