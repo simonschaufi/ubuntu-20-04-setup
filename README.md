@@ -665,6 +665,10 @@ sudo tee -a /etc/hosts <<EOL
 #### HOMESTEAD-SITES-BEGIN
 #### HOMESTEAD-SITES-END
 EOL
+
+# Let TYPO3 process PDF and AI files
+# see https://stackoverflow.com/a/60145381
+sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<!--<policy domain="coder" rights="none" pattern="PDF" \/>-->/' /etc/ImageMagick-6/policy.xml
 ```
 
 ### Make Ubuntu fully dark, not just half...
@@ -679,4 +683,3 @@ sudo apt install -y gnome-shell-extensions gnome-shell-extension-prefs gnome-twe
 
 * Disbale "Auf Arbeitsfläche darunter verschieben"
 * Disbale "Auf Arbeitsfläche darüber verschieben"
-
