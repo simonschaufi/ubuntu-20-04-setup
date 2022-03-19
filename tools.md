@@ -23,6 +23,12 @@ sudo apt install curl
 sudo apt install -y p7zip p7zip-full p7zip-rar
 ```
 
+## Graphicsmagick
+
+```bash
+sudo apt install -y graphicsmagick
+```
+
 ## Install additional php extensions
 
 ```bash
