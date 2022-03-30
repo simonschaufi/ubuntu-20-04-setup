@@ -166,6 +166,6 @@ EOL
 https://phoenixnap.com/kb/ubuntu-remove-old-kernels
 
 ```bash
-sudo add-apt-repository ppa:gerardpuig/ppa
+sudo add-apt-repository -y ppa:gerardpuig/ppa
 sudo apt install ubuntu-cleaner -y
 ```
