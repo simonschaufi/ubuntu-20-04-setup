@@ -160,3 +160,12 @@ tee -a ~/.profile <<EOL
 DOTNET_CLI_TELEMETRY_OPTOUT=1
 EOL
 ```
+
+## Ubuntu cleaner
+
+https://phoenixnap.com/kb/ubuntu-remove-old-kernels
+
+```bash
+sudo add-apt-repository ppa:gerardpuig/ppa
+sudo apt install ubuntu-cleaner -y
+```
