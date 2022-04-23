@@ -31,8 +31,11 @@ sudo apt install -y graphicsmagick
 
 ## Install additional php extensions
 
+* php-vips is required for neos.io
+
 ```bash
-sudo apt install -y php-yaml php7.4-mongodb php8.0-mongodb
+sudo apt install -y php-yaml php7.4-mongodb php8.0-mongodb \
+  php7.0-vips php7.1-vips php7.2-vips php7.3-vips php7.4-vips php8.0-vips php8.1-vips
 ```
 
 ## Install image minifier
