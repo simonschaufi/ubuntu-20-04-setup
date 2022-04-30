@@ -56,6 +56,12 @@ echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list
 sudo apt update && sudo apt install -y dbeaver-ce
 ```
 
+## DB Browser for SQLite
+
+```bash
+sudo apt install -y sqlitebrowser
+```
+
 ## Robo 3T
 
 * https://robomongo.org/download
