@@ -168,8 +168,8 @@ https://github.com/mattermost/desktop/releases
 
 ```bash
 sudo apt install -y gconf-service gconf-service-backend gconf2 gconf2-common libgconf-2-4
-wget https://github.com/mattermost/desktop/releases/download/v5.0.2/mattermost-desktop-5.0.2-linux-amd64.deb
-sudo dpkg -i mattermost-desktop-5.0.2-linux-amd64.deb && rm mattermost-desktop-5.0.2-linux-amd64.deb
+wget https://releases.mattermost.com/desktop/5.1.0/mattermost-desktop_5.1.0-1_amd64.deb
+sudo dpkg -i mattermost-desktop_5.1.0-1_amd64.deb && rm mattermost-desktop_5.1.0-1_amd64.deb
 ```
 
 ## Slack
