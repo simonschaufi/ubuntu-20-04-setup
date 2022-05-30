@@ -199,3 +199,9 @@ sudo apt install -y ./teams_amd64.deb && rm teams_amd64.deb
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install -y ./zoom_amd64.deb && rm zoom_amd64.deb
 ```
+
+## ddev
+
+```bash
+curl -LO https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh && bash install_ddev.sh
+```
