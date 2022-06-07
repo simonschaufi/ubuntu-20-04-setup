@@ -42,6 +42,13 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo apt update && sudo apt install -y ffmpeg obs-studio
 ```
 
+## Inkscape
+
+```bash
+sudo add-apt-repository -y ppa:inkscape.dev/stable
+sudo apt update && sudo apt install -y inkscape
+```
+
 ## Clementine
 
 ```bash
