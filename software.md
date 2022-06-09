@@ -212,3 +212,9 @@ sudo apt install -y ./zoom_amd64.deb && rm zoom_amd64.deb
 ```bash
 curl -LO https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh && bash install_ddev.sh
 ```
+
+## Poedit
+
+```bash
+sudo apt install -y poedit
+```
