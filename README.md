@@ -653,7 +653,7 @@ swapon /swapfile
 
 ```bash
 # Remove sudoku game
-sudo apt remove --auto-remove --purge -y gnome-sudoku
+sudo apt remove --auto-remove --purge -y gnome-sudoku aisleriot
 
 # Disable bluetooth startup
 sudo sed -i "s/AutoEnable=true/AutoEnable=false/" /etc/bluetooth/main.conf
