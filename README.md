@@ -641,7 +641,7 @@ apt-get -y clean;
 sysctl fs.protected_regular=0
 
 # Enable Swap Memory (https://askubuntu.com/a/1075516)
-swapoff /swapfile
+swapoff -a
 rm /swapfile
 fallocate -l 16G /swapfile
 chmod 600 /swapfile
