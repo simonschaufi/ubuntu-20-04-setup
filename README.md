@@ -649,6 +649,21 @@ mkswap /swapfile
 swapon /swapfile
 ```
 
+Special adjustments for travel laptop with encrypted hard drive:
+
+* https://bugs.launchpad.net/ubuntu/+source/partman-auto/+bug/1767299/comments/31
+
+```bash
+swapoff -a
+rm /swapfile
+fallocate -l 16g /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
+```
+
 ## My own stuff
 
 ```bash
