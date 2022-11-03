@@ -14,7 +14,13 @@ aspell --lang=de dump master | aspell --lang=de expand | tr ' ' '\n' > de.dic
 ## Curl
 
 ```bash
-sudo apt install curl
+sudo apt install -y curl
+```
+
+## ack
+
+```bash
+sudo apt install -y ack
 ```
 
 ## Install additional 7zip packages
@@ -170,5 +176,5 @@ https://phoenixnap.com/kb/ubuntu-remove-old-kernels
 
 ```bash
 sudo add-apt-repository -y ppa:gerardpuig/ppa
-sudo apt install ubuntu-cleaner -y
+sudo apt install -y ubuntu-cleaner
 ```
