@@ -23,6 +23,12 @@ sudo apt install -y curl
 sudo apt install -y ack
 ```
 
+How to use it?
+
+```bash
+ack 'use ProphecyTrait' typo3/|wc -l; ack 'prophesize' typo3/|wc -l
+```
+
 ## Install additional 7zip packages
 
 ```bash
