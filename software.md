@@ -218,3 +218,20 @@ curl -LO https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev
 ```bash
 sudo apt install -y poedit
 ```
+
+## JOSM
+
+https://josm.openstreetmap.de/wiki/Download#Ubuntu
+
+```bash
+echo "deb [signed-by=/usr/local/share/keyrings/josm-apt.gpg] https://josm.openstreetmap.de/apt $(lsb_release -sc) universe" | sudo tee /etc/apt/sources.list.d/josm.list > /dev/null
+# Create the directory for manually downloaded keys if it was not already created
+sudo mkdir -p /usr/local/share/keyrings
+# Download the key
+wget -q https://josm.openstreetmap.de/josm-apt.key -O- | sudo gpg --dearmor -o /usr/local/share/keyrings/josm-apt.gpg
+# You may need to install ssl support for apt in advance:
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get remove josm josm-plugins
+sudo apt-get install -y josm
+```
