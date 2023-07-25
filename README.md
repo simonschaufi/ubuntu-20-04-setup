@@ -684,6 +684,9 @@ EOL
 # Let TYPO3 process PDF and AI files
 # see https://stackoverflow.com/a/60145381
 sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<!--<policy domain="coder" rights="none" pattern="PDF" \/>-->/' /etc/ImageMagick-6/policy.xml
+
+# Let TYPO3 process webp files
+sudo apt install -y webp
 ```
 
 ### Make Ubuntu fully dark, not just half...
