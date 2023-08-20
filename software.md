@@ -221,6 +221,15 @@ sudo apt install -y poedit
 
 ## JOSM
 
+Needs openwebstart (https://josm.openstreetmap.de/wiki/De%3ADownload#Webstart):
+
+https://openwebstart.com/download/
+
+```
+wget https://github.com/karakun/OpenWebStart/releases/download/v1.8.0/OpenWebStart_linux_1_8_0.deb
+sudo apt install -y ./OpenWebStart_linux_1_8_0.deb
+```
+
 https://josm.openstreetmap.de/wiki/Download#Ubuntu
 
 ```bash
