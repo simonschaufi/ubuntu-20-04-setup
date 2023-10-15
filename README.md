@@ -47,6 +47,8 @@ apt-add-repository ppa:ondrej/php -y
 apt-add-repository ppa:chris-lea/redis-server -y
 
 # NodeJS
+
+# see https://github.com/nodesource/distributions#ubuntu-versions
 apt-get install -y ca-certificates curl gnupg
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
