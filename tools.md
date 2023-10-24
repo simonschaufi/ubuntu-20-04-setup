@@ -17,6 +17,14 @@ aspell --lang=de dump master | aspell --lang=de expand | tr ' ' '\n' > de.dic
 sudo apt install -y curl
 ```
 
+## jq
+
+commandline JSON processor 
+
+```bash
+sudo apt install -y jq
+```
+
 ## ack
 
 ```bash
