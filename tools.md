@@ -184,6 +184,21 @@ DOTNET_CLI_TELEMETRY_OPTOUT=1
 EOL
 ```
 
+## Flutter
+
+https://docs.flutter.dev/get-started/install/linux
+
+```bash
+cd ~/Downloads/
+wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.13.9-stable.tar.xz
+tar xf ~/Downloads/flutter_linux_3.13.9-stable.tar.xz
+echo 'export PATH="$PATH:$HOME/Downloads/flutter/bin"' >> $HOME/.bashrc
+source $HOME/.bashrc
+flutter config --no-analytics
+flutter --disable-telemetry
+flutter precache
+```
+
 ## Dart
 
 https://dart.dev/get-dart
