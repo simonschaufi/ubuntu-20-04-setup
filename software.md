@@ -65,7 +65,10 @@ sudo apt update && sudo apt install -y dbeaver-ce
 
 ## DB Browser for SQLite
 
+https://sqlitebrowser.org/dl/
+
 ```bash
+sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
 sudo apt install -y sqlitebrowser
 ```
 
