@@ -677,7 +677,7 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 
 ```bash
 # Remove sudoku game
-sudo apt remove --auto-remove --purge -y gnome-sudoku gnome-mines aisleriot
+sudo apt remove --auto-remove --purge -y gnome-mahjongg gnome-sudoku gnome-mines aisleriot
 
 # Disable bluetooth startup
 sudo sed -i "s/AutoEnable=true/AutoEnable=false/" /etc/bluetooth/main.conf
