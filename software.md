@@ -247,3 +247,11 @@ sudo apt-get update
 sudo apt-get remove josm josm-plugins
 sudo apt-get install -y josm
 ```
+
+## VLC Player
+
+https://www.videolan.org/vlc/download-ubuntu.html
+
+```bash
+sudo apt install -y vlc
+```
