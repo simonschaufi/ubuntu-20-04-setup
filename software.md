@@ -253,5 +253,5 @@ sudo apt-get install -y josm
 https://www.videolan.org/vlc/download-ubuntu.html
 
 ```bash
-sudo apt install -y vlc
+sudo apt update && sudo apt install -y vlc
 ```
