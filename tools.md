@@ -25,6 +25,14 @@ commandline JSON processor
 sudo apt install -y jq
 ```
 
+## parallel
+
+This is needed to run unit tests in parallel
+
+```bash
+sudo apt install -y parallel
+```
+
 ## ack
 
 ```bash
