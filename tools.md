@@ -75,6 +75,12 @@ sudo apt install -y optipng jpegoptim libjpeg-turbo-progs gifsicle
 yarn global add svgo
 ```
 
+## SVN
+
+```bash
+sudo apt install -y subversion
+```
+
 ## Install Ruby with rbenv
 
 * https://github.com/rbenv/rbenv#installation
