@@ -255,3 +255,11 @@ https://www.videolan.org/vlc/download-ubuntu.html
 ```bash
 sudo apt update && sudo apt install -y vlc
 ```
+
+## WireGuard
+
+https://www.wireguard.com/install/
+
+```bash
+sudo apt install -y wireguard
+```
