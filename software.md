@@ -261,5 +261,5 @@ sudo apt update && sudo apt install -y vlc
 https://www.wireguard.com/install/
 
 ```bash
-sudo apt install -y wireguard
+sudo apt install -y wireguard resolvconf
 ```
