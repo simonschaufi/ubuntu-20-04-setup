@@ -68,7 +68,7 @@ apt-get install -y build-essential dos2unix gcc git git-lfs libmcrypt4 libpcre3-
 python3-pip re2c supervisor unattended-upgrades whois vim cifs-utils bash-completion zsh graphviz avahi-daemon tshark
 
 # Set My Timezone
-ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 # Install docker-ce
 curl -fsSL https://get.docker.com | bash -s
