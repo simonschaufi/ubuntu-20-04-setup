@@ -730,27 +730,27 @@ service redis-server start
 # Configure Beanstalkd
 sed -i "s/#START=yes/START=yes/" /etc/default/beanstalkd
 
-# Install & Configure MailHog
-if [[ "$ARCH" == "aarch64" ]]; then
-  wget --quiet -O /usr/local/bin/mailhog https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_arm
-else
-  wget --quiet -O /usr/local/bin/mailhog https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_amd64
-fi
-chmod +x /usr/local/bin/mailhog
-
-sudo tee /etc/systemd/system/mailhog.service <<EOL
+# Install & Configure Mailpit
+curl -sL https://raw.githubusercontent.com/axllent/mailpit/develop/install.sh | bash
+chmod +x /usr/local/bin/mailpit
+tee /etc/systemd/system/mailpit.service <<EOL
 [Unit]
-Description=Mailhog
+Description=Mailpit
 After=network.target
+
 [Service]
 User=${USER}
-ExecStart=/usr/bin/env /usr/local/bin/mailhog > /dev/null 2>&1 &
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/bin/env /usr/local/bin/mailpit
+
 [Install]
 WantedBy=multi-user.target
 EOL
 
 systemctl daemon-reload
-systemctl enable mailhog
+systemctl enable mailpit
+service mailpit restart
 
 # Install & Configure Postfix
 echo "postfix postfix/mailname string homestead.test" | debconf-set-selections
