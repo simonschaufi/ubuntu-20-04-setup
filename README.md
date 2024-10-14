@@ -834,5 +834,5 @@ sudo apt install -y gnome-shell-extensions gnome-shell-extension-prefs gnome-twe
 
 ### Adjust ubuntu internal keyboad shortcuts
 
-* Disbale "Auf Arbeitsfläche darunter verschieben"
-* Disbale "Auf Arbeitsfläche darüber verschieben"
+* Disable "Auf Arbeitsfläche darunter verschieben"
+* Disable "Auf Arbeitsfläche darüber verschieben"
