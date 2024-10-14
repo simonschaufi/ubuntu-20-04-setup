@@ -89,6 +89,8 @@ else
   apt-get install -y --allow-change-held-packages \
   php-imagick php-memcached php-redis php-xdebug php-dev php-swoole imagemagick mcrypt
 
+  #########
+
   # PHP 7.0
   apt-get install -y --allow-change-held-packages \
   php7.0-bcmath php7.0-bz2 php7.0-cgi php7.0-cli php7.0-common php7.0-curl php7.0-dba php7.0-dev php7.0-enchant \
@@ -133,6 +135,8 @@ else
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/7.0/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.0/fpm/pool.d/www.conf
 
+  #########
+
   # PHP 7.1
   apt-get install -y --allow-change-held-packages \
   php7.1-bcmath php7.1-bz2 php7.1-cgi php7.1-cli php7.1-common php7.1-curl php7.1-dba php7.1-dev php7.1-enchant \
@@ -176,6 +180,8 @@ else
   sed -i "s/listen\.owner.*/listen.owner = ${USER}/" /etc/php/7.1/fpm/pool.d/www.conf
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/7.1/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.1/fpm/pool.d/www.conf
+
+  #########
 
   # PHP 7.2
   apt-get install -y --allow-change-held-packages \
@@ -222,6 +228,8 @@ else
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/7.2/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.2/fpm/pool.d/www.conf
 
+  #########
+
   # PHP 7.3
   apt-get install -y --allow-change-held-packages \
   php7.3 php7.3-bcmath php7.3-bz2 php7.3-cgi php7.3-cli php7.3-common php7.3-curl php7.3-dba php7.3-dev php7.3-enchant \
@@ -265,6 +273,8 @@ else
   sed -i "s/listen\.owner.*/listen.owner = ${USER}/" /etc/php/7.3/fpm/pool.d/www.conf
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/7.3/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.3/fpm/pool.d/www.conf
+
+  #########
 
   # PHP 7.4
   apt-get install -y --allow-change-held-packages \
@@ -310,6 +320,8 @@ else
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/7.4/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.4/fpm/pool.d/www.conf
 
+  #########
+
   # PHP 8.0
   apt-get install -y --allow-change-held-packages \
   php8.0 php8.0-bcmath php8.0-bz2 php8.0-cgi php8.0-cli php8.0-common php8.0-curl php8.0-dba php8.0-dev \
@@ -353,6 +365,8 @@ else
   sed -i "s/listen\.owner.*/listen.owner = ${USER}/" /etc/php/8.0/fpm/pool.d/www.conf
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/8.0/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/8.0/fpm/pool.d/www.conf
+
+  #########
 
   # PHP 8.1
   apt-get install -y --allow-change-held-packages \
@@ -398,49 +412,7 @@ else
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/8.1/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/8.1/fpm/pool.d/www.conf
 
-  # PHP 8.2
-  apt-get install -y --allow-change-held-packages \
-  php8.1 php8.1-bcmath php8.1-bz2 php8.1-cgi php8.1-cli php8.1-common php8.1-curl php8.1-dba php8.1-dev \
-  php8.1-enchant php8.1-fpm php8.1-gd php8.1-gmp php8.1-imap php8.1-interbase php8.1-intl php8.1-ldap \
-  php8.1-mbstring php8.1-mysql php8.1-odbc php8.1-opcache php8.1-pgsql php8.1-phpdbg php8.1-pspell php8.1-readline \
-  php8.1-snmp php8.1-soap php8.1-sqlite3 php8.1-sybase php8.1-tidy php8.1-xdebug php8.1-xml php8.1-xmlrpc php8.1-xsl \
-  php8.1-zip php8.1-memcached php8.1-redis
-
-  # Configure php.ini for CLI
-  sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.1/cli/php.ini
-  sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.1/cli/php.ini
-  sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.1/cli/php.ini
-  sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.1/cli/php.ini
-
-  # Configure Xdebug
-  echo "xdebug.mode = debug" >> /etc/php/8.1/mods-available/xdebug.ini
-  echo "xdebug.discover_client_host = true" >> /etc/php/8.1/mods-available/xdebug.ini
-  echo "xdebug.client_port = 9003" >> /etc/php/8.1/mods-available/xdebug.ini
-  echo "xdebug.max_nesting_level = 512" >> /etc/php/8.1/mods-available/xdebug.ini
-  echo "opcache.revalidate_freq = 0" >> /etc/php/8.1/mods-available/opcache.ini
-
-  # Configure php.ini for FPM
-  sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.1/fpm/php.ini
-  sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.1/fpm/php.ini
-#  sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/8.1/fpm/php.ini This is required for TYPO3!
-  sed -i "s/;max_input_vars = .*/max_input_vars = 1500/" /etc/php/8.1/fpm/php.ini
-  sed -i "s/max_execution_time = .*/max_execution_time = 240/" /etc/php/8.1/fpm/php.ini
-  sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.1/fpm/php.ini
-  sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/8.1/fpm/php.ini
-  sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/8.1/fpm/php.ini
-  sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.1/fpm/php.ini
-
-  printf "[openssl]\n" | tee -a /etc/php/8.1/fpm/php.ini
-  printf "openssl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.1/fpm/php.ini
-  printf "[curl]\n" | tee -a /etc/php/8.1/fpm/php.ini
-  printf "curl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.1/fpm/php.ini
-
-  # Configure FPM
-  sed -i "s/user = www-data/user = ${USER}/" /etc/php/8.1/fpm/pool.d/www.conf
-  sed -i "s/group = www-data/group = ${USER}/" /etc/php/8.1/fpm/pool.d/www.conf
-  sed -i "s/listen\.owner.*/listen.owner = ${USER}/" /etc/php/8.1/fpm/pool.d/www.conf
-  sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/8.1/fpm/pool.d/www.conf
-  sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/8.1/fpm/pool.d/www.conf
+  #########
 
   # PHP 8.2
   apt-get install -y --allow-change-held-packages \
@@ -486,6 +458,8 @@ else
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/8.2/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/8.2/fpm/pool.d/www.conf
 
+  #########
+
   # PHP 8.3
   apt-get install -y --allow-change-held-packages \
   php8.3 php8.3-bcmath php8.3-bz2 php8.3-cgi php8.3-cli php8.3-common php8.3-curl php8.3-dba php8.3-dev \
@@ -493,20 +467,20 @@ else
   php8.3-mbstring php8.3-mysql php8.3-odbc php8.3-opcache php8.3-pgsql php8.3-phpdbg php8.3-pspell php8.3-readline \
   php8.3-snmp php8.3-soap php8.3-sqlite3 php8.3-sybase php8.3-tidy php8.3-xml php8.3-xsl \
   php8.3-zip php8.3-imagick php8.3-memcached php8.3-redis php8.3-xmlrpc php8.3-xdebug
-  
+
   # Configure php.ini for CLI
   sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.3/cli/php.ini
   sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.3/cli/php.ini
   sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.3/cli/php.ini
   sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.3/cli/php.ini
-  
+
   # Configure Xdebug
   echo "xdebug.mode = debug" >> /etc/php/8.3/mods-available/xdebug.ini
   echo "xdebug.discover_client_host = true" >> /etc/php/8.3/mods-available/xdebug.ini
   echo "xdebug.client_port = 9003" >> /etc/php/8.3/mods-available/xdebug.ini
   echo "xdebug.max_nesting_level = 512" >> /etc/php/8.3/mods-available/xdebug.ini
   echo "opcache.revalidate_freq = 0" >> /etc/php/8.3/mods-available/opcache.ini
-  
+
   # Configure php.ini for FPM
   sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.3/fpm/php.ini
   sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.3/fpm/php.ini
@@ -517,18 +491,20 @@ else
   sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/8.3/fpm/php.ini
   sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/8.3/fpm/php.ini
   sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.3/fpm/php.ini
-  
+
   printf "[openssl]\n" | tee -a /etc/php/8.3/fpm/php.ini
   printf "openssl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.3/fpm/php.ini
   printf "[curl]\n" | tee -a /etc/php/8.3/fpm/php.ini
   printf "curl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.3/fpm/php.ini
-  
+
   # Configure FPM
   sed -i "s/user = www-data/user = ${USER}/" /etc/php/8.3/fpm/pool.d/www.conf
   sed -i "s/group = www-data/group = ${USER}/" /etc/php/8.3/fpm/pool.d/www.conf
   sed -i "s/listen\.owner.*/listen.owner = ${USER}/" /etc/php/8.3/fpm/pool.d/www.conf
   sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/8.3/fpm/pool.d/www.conf
   sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/8.3/fpm/pool.d/www.conf
+
+  #########
 
   # PHP 8.4
   apt-get install -y --allow-change-held-packages \
@@ -537,20 +513,20 @@ else
   php8.4-mbstring php8.4-mysql php8.4-odbc php8.4-opcache php8.4-pgsql php8.4-phpdbg php8.4-pspell php8.4-readline \
   php8.4-snmp php8.4-soap php8.4-sqlite3 php8.4-sybase php8.4-tidy php8.4-xml php8.4-xsl \
   php8.4-zip php8.4-imagick php8.4-memcached php8.4-redis php8.4-xmlrpc php8.4-xdebug
-  
+
   # Configure php.ini for CLI
   sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.4/cli/php.ini
   sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.4/cli/php.ini
   sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.4/cli/php.ini
   sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.4/cli/php.ini
-  
+
   # Configure Xdebug
   echo "xdebug.mode = debug" >> /etc/php/8.4/mods-available/xdebug.ini
   echo "xdebug.discover_client_host = true" >> /etc/php/8.4/mods-available/xdebug.ini
   echo "xdebug.client_port = 9003" >> /etc/php/8.4/mods-available/xdebug.ini
   echo "xdebug.max_nesting_level = 512" >> /etc/php/8.4/mods-available/xdebug.ini
   echo "opcache.revalidate_freq = 0" >> /etc/php/8.4/mods-available/opcache.ini
-  
+
   # Configure php.ini for FPM
   sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.4/fpm/php.ini
   sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.4/fpm/php.ini
@@ -561,12 +537,12 @@ else
   sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/8.4/fpm/php.ini
   sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/8.4/fpm/php.ini
   sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.4/fpm/php.ini
-  
+
   printf "[openssl]\n" | tee -a /etc/php/8.4/fpm/php.ini
   printf "openssl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.4/fpm/php.ini
   printf "[curl]\n" | tee -a /etc/php/8.4/fpm/php.ini
   printf "curl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.4/fpm/php.ini
-  
+
   # Configure FPM
   sed -i "s/user = www-data/user = ${USER}/" /etc/php/8.4/fpm/pool.d/www.conf
   sed -i "s/group = www-data/group = ${USER}/" /etc/php/8.4/fpm/pool.d/www.conf
@@ -605,18 +581,12 @@ else
   /usr/local/bin/composer global require typo3/tailor
 EOF
 
-  # Set Some PHP CLI Settings
-  sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.0/cli/php.ini
-  sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.0/cli/php.ini
-  sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.0/cli/php.ini
-  sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.0/cli/php.ini
-
   # Install Apache
   #apt-get install -y apache2 libapache2-mod-fcgid
   #sed -i "s/www-data/${USER}/" /etc/apache2/envvars
 
   # Enable FPM
-  #a2enconf php8.0-fpm
+  #a2enconf php8.3-fpm
 
   # Assume user wants mode_rewrite support
   #sudo a2enmod rewrite
@@ -651,34 +621,12 @@ EOF
   touch /home/${USER}/.config/nginx/nginx.conf
   ln -sf /home/${USER}/.config/nginx/nginx.conf /etc/nginx/conf.d/nginx.conf
 
-  # Setup Some PHP-FPM Options
-  sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.0/fpm/php.ini
-  sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.0/fpm/php.ini
-#  sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/8.0/fpm/php.ini This is required for TYPO3!
-  sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.0/fpm/php.ini
-  sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/8.0/fpm/php.ini
-  sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/8.0/fpm/php.ini
-  sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.0/fpm/php.ini
-
-  printf "[openssl]\n" | tee -a /etc/php/8.0/fpm/php.ini
-  printf "openssl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.0/fpm/php.ini
-
-  printf "[curl]\n" | tee -a /etc/php/8.0/fpm/php.ini
-  printf "curl.cainfo = /etc/ssl/certs/ca-certificates.crt\n" | tee -a /etc/php/8.0/fpm/php.ini
-
   # Disable XDebug On The CLI
   sudo phpdismod -s cli xdebug
 
   # Set The Nginx & PHP-FPM User
   sed -i "s/user www-data;/user ${USER};/" /etc/nginx/nginx.conf
   sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/" /etc/nginx/nginx.conf
-
-  sed -i "s/user = www-data/user = ${USER}/" /etc/php/8.0/fpm/pool.d/www.conf
-  sed -i "s/group = www-data/group = ${USER}/" /etc/php/8.0/fpm/pool.d/www.conf
-
-  sed -i "s/listen\.owner.*/listen.owner = ${USER}/" /etc/php/8.0/fpm/pool.d/www.conf
-  sed -i "s/listen\.group.*/listen.group = ${USER}/" /etc/php/8.0/fpm/pool.d/www.conf
-  sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/8.0/fpm/pool.d/www.conf
 
   service nginx restart
   service php7.0-fpm restart
@@ -690,6 +638,7 @@ EOF
   service php8.1-fpm restart
   service php8.2-fpm restart
   service php8.3-fpm restart
+  service php8.4-fpm restart
 
   # Add User To WWW-Data
   usermod -a -G www-data ${USER}
@@ -853,7 +802,7 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 ## My own stuff
 
 ```bash
-# Remove sudoku game
+# Remove games
 sudo apt remove --auto-remove --purge -y gnome-mahjongg gnome-sudoku gnome-mines aisleriot
 
 # Disable bluetooth startup
