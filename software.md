@@ -198,13 +198,6 @@ wget https://downloads.slack-edge.com/releases/linux/4.21.1/prod/x64/slack-deskt
 sudo apt install -y ./slack-desktop-4.21.1-amd64.deb && rm slack-desktop-4.21.1-amd64.deb
 ```
 
-## Skype
-
-```bash
-wget https://go.skype.com/skypeforlinux-64.deb
-sudo apt install -y ./skypeforlinux-64.deb && rm skypeforlinux-64.deb
-```
-
 ## Teams
 
 ```bash
