@@ -177,8 +177,8 @@ rm discord.deb
 https://github.com/RocketChat/Rocket.Chat.Electron/releases
 
 ```bash
-wget https://downloads.slack-edge.com/releases/linux/4.21.1/prod/x64/slack-desktop-4.21.1-amd64.deb
-sudo apt install -y ./slack-desktop-4.21.1-amd64.deb && rm slack-desktop-4.21.1-amd64.deb
+wget https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/4.9.0/rocketchat-4.9.0-linux-amd64.deb
+sudo apt install -y ./rocketchat-4.9.0-linux-amd64.deb && rm rocketchat-4.9.0-linux-amd64.deb
 ```
 
 ## Mattermost
