@@ -265,3 +265,12 @@ https://www.wireguard.com/install/
 ```bash
 sudo apt install -y wireguard resolvconf
 ```
+
+## ONLYOFFICE
+
+https://github.com/ONLYOFFICE/DesktopEditors/releases
+
+```
+wget https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v9.1.0/onlyoffice-desktopeditors_amd64.deb
+sudo apt install -y ./onlyoffice-desktopeditors_amd64.deb && rm onlyoffice-desktopeditors_amd64.deb
+```
