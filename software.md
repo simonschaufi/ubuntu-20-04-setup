@@ -230,7 +230,7 @@ Needs openwebstart (https://josm.openstreetmap.de/wiki/De%3ADownload#Webstart):
 
 https://openwebstart.com/download/
 
-```
+```bash
 wget https://github.com/karakun/OpenWebStart/releases/download/v1.8.0/OpenWebStart_linux_1_8_0.deb
 sudo apt install -y ./OpenWebStart_linux_1_8_0.deb
 ```
@@ -270,7 +270,16 @@ sudo apt install -y wireguard resolvconf
 
 https://github.com/ONLYOFFICE/DesktopEditors/releases
 
-```
+```bash
 wget https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v9.1.0/onlyoffice-desktopeditors_amd64.deb
 sudo apt install -y ./onlyoffice-desktopeditors_amd64.deb && rm onlyoffice-desktopeditors_amd64.deb
+```
+
+## Shutter
+
+Screenshot Tool
+
+```bash
+sudo add-apt-repository ppa:linuxuprising/shutter
+sudo apt-get install -y shutter
 ```
