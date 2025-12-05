@@ -177,8 +177,8 @@ rm discord.deb
 https://github.com/RocketChat/Rocket.Chat.Electron/releases
 
 ```bash
-wget https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/4.9.2/rocketchat-4.9.2-linux-amd64.deb
-sudo apt install -y ./rocketchat-4.9.2-linux-amd64.deb && rm rocketchat-4.9.2-linux-amd64.deb
+wget https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/4.10.0/rocketchat-4.10.0-linux-amd64.deb
+sudo apt install -y ./rocketchat-4.10.0-linux-amd64.deb && rm rocketchat-4.10.0-linux-amd64.deb
 ```
 
 ## Mattermost
