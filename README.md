@@ -836,3 +836,13 @@ sudo apt install -y gnome-shell-extensions gnome-shell-extension-prefs gnome-twe
 
 * Disable "Auf Arbeitsfläche darunter verschieben"
 * Disable "Auf Arbeitsfläche darüber verschieben"
+
+### Update MySQL key
+
+Der aktualisierte Schlüssel ist auf der Ubuntu-Website verfügbar. Quelle: https://www.reddit.com/r/mysql/comments/1oe0u74/comment/nmysetj/?tl=de
+
+```bash
+curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xB7B3B788A8D3785C" -o /tmp/RPM-GPG-KEY-mysql-2023
+sudo gpg --dearmor < /tmp/RPM-GPG-KEY-mysql-2023 | sudo tee /usr/share/keyrings/mysql-apt-config.gpg >/dev/null
+rm /tmp/RPM-GPG-KEY-mysql-2023
+```
