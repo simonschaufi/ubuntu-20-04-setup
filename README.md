@@ -38,6 +38,8 @@ apt-get upgrade -y
 # Force Locale
 echo "LC_ALL=de_DE.UTF-8" >> /etc/default/locale
 locale-gen de_DE.UTF-8
+locale-gen es_ES.UTF-8
+locale-gen fr_FR.UTF-8
 
 apt-get install -y software-properties-common curl gnupg debian-keyring debian-archive-keyring apt-transport-https \
 ca-certificates
