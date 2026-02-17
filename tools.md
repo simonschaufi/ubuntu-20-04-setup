@@ -239,7 +239,20 @@ echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.go
 sudo apt-get update
 sudo apt install -y dart
 
-echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+export PATH="$PATH:/usr/lib/dart/bin"
+echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> $HOME/.profile
+```
+
+## Go
+
+https://go.dev/doc/install
+
+```bash
+wget https://go.dev/dl/go1.26.0.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.26.0.linux-amd64.tar.gz
+export PATH="$PATH:/usr/local/go/bin"
+echo 'export PATH="$PATH:/usr/local/go/bin"' >> $HOME/.profile
+rm go1.26.0.linux-amd64.tar.gz
 ```
 
 ## Ubuntu cleaner
