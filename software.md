@@ -112,6 +112,12 @@ curl -fsSL https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_20.
 sudo apt update && sudo apt install -y doublecmd-gtk
 ```
 
+## Meld diff viewer
+
+```bash
+sudo apt install -y meld
+```
+
 ## PDF Arranger
 
 https://wiki.ubuntuusers.de/PDF_Arranger/
