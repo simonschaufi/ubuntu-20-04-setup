@@ -35,6 +35,18 @@ sudo add-apt-repository ppa:audio-recorder/ppa
 sudo apt update -y && sudo apt install -y audio-recorder
 ```
 
+## Spotify
+
+https://www.spotify.com/uk/download/linux/
+
+Note: Spotify Desktop Client requires `libc6 (>= 2.39)` which is not available for Ubuntu 20.04!
+
+```bash
+curl -sS https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt update && sudo apt install -y spotify-client
+```
+
 ## OBS Studio
 
 ```bash
