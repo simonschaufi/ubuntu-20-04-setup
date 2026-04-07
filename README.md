@@ -848,3 +848,12 @@ curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xB7B3B788A8D3
 sudo gpg --dearmor < /tmp/RPM-GPG-KEY-mysql-2023 | sudo tee /usr/share/keyrings/mysql-apt-config.gpg >/dev/null
 rm /tmp/RPM-GPG-KEY-mysql-2023
 ```
+
+### Upgrade nodejs
+
+https://github.com/nodesource/distributions/blob/master/OLD_README.md
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+sudo apt install -y nodejs
+```
