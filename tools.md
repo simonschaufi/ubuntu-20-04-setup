@@ -1,6 +1,6 @@
 # Tools
 
-## GitHub cli
+## GitHub CLI
 
 https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 
@@ -11,6 +11,15 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 && sudo apt update \
 && sudo apt install gh -y
+```
+
+## GitLab CLI
+
+https://gitlab.com/gitlab-org/cli#installation
+
+```bash
+wget -q https://gitlab.com/gitlab-org/cli/-/releases/v1.118.0/downloads/glab_1.118.0_linux_amd64.deb
+sudo apt install -y ./glab_1.118.0_linux_amd64.deb && rm glab_1.118.0_linux_amd64.deb
 ```
 
 
@@ -151,7 +160,7 @@ https://www.virtualbox.org/wiki/Linux_Downloads
 
 ```bash
 wget -q https://download.virtualbox.org/virtualbox/6.1.26/virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb
-sudo apt install -y virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb && rm virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb
+sudo apt install -y ./virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb && rm virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb
 ```
 
 ## Mkcert
